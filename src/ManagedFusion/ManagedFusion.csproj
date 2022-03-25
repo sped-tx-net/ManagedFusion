@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>C# Wrapper liwrapper library for the Windows Fusion API.</Description>
+    <PackageDescription>$(Description)</PackageDescription>
+    <PackageReleaseNotes>$(PackageDescription)</PackageReleaseNotes>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>ManagedFusion</AssemblyName>
+    <RootNamespace>System.Management.Fusion</RootNamespace>
+  </PropertyGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

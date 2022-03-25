@@ -21,9 +21,7 @@
 
 #endregion
 
-using System;
 using System.Runtime.InteropServices;
-using System.Management.Fusion.WrappedFusion;
 
 namespace System.Management.Fusion.WrappedFusion
 {
@@ -96,7 +94,7 @@ namespace System.Management.Fusion.WrappedFusion
         /// The IAssemblyCache::InstallAssembly method adds a new assembly to the GAC. The assembly must be persisted in the file 
         /// system and is copied to the GAC.
         /// </summary>
-        /// <param name="dwFlags">At most, one of the bits of the <see cref="InstallBehaviour"/> enumeration.</param>
+        /// <param name="dwFlags">At most, one of the bits of the <see cref="InstallBehavior"/> enumeration.</param>
         /// <param name="pszManifestFilePath"> A string pointing to the dynamic-linked library (DLL) that contains the assembly manifest. 
         ///	Other assembly files must reside in the same directory as the DLL that contains the assembly manifest.</param>
         /// <param name="pRefData">A pointer to a <see cref="FusionInstallReference"/> that indicates the application on whose behalf the 
@@ -105,7 +103,7 @@ namespace System.Management.Fusion.WrappedFusion
         /// <returns></returns>
         [PreserveSig]
         int InstallAssembly(
-          InstallBehaviour dwFlags,
+          InstallBehavior dwFlags,
           [MarshalAs(UnmanagedType.LPWStr)] string pszManifestFilePath,
           IntPtr pRefData);
     }

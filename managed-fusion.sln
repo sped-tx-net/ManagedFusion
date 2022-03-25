@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{D038CE42
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7857531B-53A9-44C3-8C42-95F5782F488E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Management.Fusion", "src\System.Management.Fusion\System.Management.Fusion.csproj", "{87B7A5DD-79FF-4084-8C38-44EE2F1D179A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagedFusion", "src\ManagedFusion\ManagedFusion.csproj", "{1323A6C9-6CD9-4A38-8FAC-1FD81FE692E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{87B7A5DD-79FF-4084-8C38-44EE2F1D179A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87B7A5DD-79FF-4084-8C38-44EE2F1D179A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87B7A5DD-79FF-4084-8C38-44EE2F1D179A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87B7A5DD-79FF-4084-8C38-44EE2F1D179A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1323A6C9-6CD9-4A38-8FAC-1FD81FE692E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1323A6C9-6CD9-4A38-8FAC-1FD81FE692E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1323A6C9-6CD9-4A38-8FAC-1FD81FE692E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1323A6C9-6CD9-4A38-8FAC-1FD81FE692E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

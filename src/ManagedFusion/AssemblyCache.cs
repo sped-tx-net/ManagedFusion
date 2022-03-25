@@ -18,7 +18,9 @@
     along with AppStract.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Management.Fusion.Helpers;
 using System.Management.Fusion.WrappedFusion;
@@ -90,6 +92,34 @@ namespace System.Management.Fusion
             _installer = installerReference;
         }
 
+        internal static AssemblyCache GetGlobalAssemblyCache()
+        {
+            return new AssemblyCache(InstallerDescription.CreateForInstaller("Installer", "Installer"));
+        }
+
+        internal static IEnumerable<Assembly> GetAssemblies()
+        {
+            return GetGlobalAssemblyCache().GetAssembliesCore();
+        }
+
+        private IEnumerable<Assembly> GetAssembliesCore()
+        {
+            List<Assembly> list = new List<Assembly>();
+            IEnumerator<AssemblyName> enumerator = GetEnumerator();
+            while (enumerator.MoveNext())
+            {
+                try
+                {
+                    list.Add(Assembly.Load(enumerator.Current.FullName));
+                }
+                catch (Exception e)
+                {
+                    Debug.Print(e.Message);
+                }
+            }
+            return list;
+        }
+
         /// <summary>
         /// Returns the storage location of the Global Assembly Cache.
         /// </summary>
@@ -139,7 +169,7 @@ namespace System.Management.Fusion
         /// <exception cref="UnauthorizedAccessException">An <see cref="UnauthorizedAccessException"/> is thrown when the caller does not have the required rights to install an assembly.</exception>
         /// <param name="assemblyName"></param>
         /// <param name="disposition"></param>
-        public void InstallAssembly(AssemblyName assemblyName, InstallBehaviour disposition)
+        public void InstallAssembly(AssemblyName assemblyName, InstallBehavior disposition)
         {
             if (assemblyName == null)
                 throw new ArgumentNullException("assemblyName");
@@ -239,7 +269,7 @@ namespace System.Management.Fusion
             return new AssemblyEnumerator();
         }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
             return new AssemblyEnumerator();
         }
