@@ -8,6 +8,7 @@
     <PackageDescription>$(Description)</PackageDescription>
     <PackageReleaseNotes>$(PackageDescription)</PackageReleaseNotes>
     <TargetFramework>net6.0</TargetFramework>
+    <PackageId>ManagedFusion</PackageId>
     <AssemblyName>ManagedFusion</AssemblyName>
     <RootNamespace>System.Management.Fusion</RootNamespace>
   </PropertyGroup>

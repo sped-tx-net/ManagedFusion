@@ -23,14 +23,14 @@
     <GitHubRepositoryBranch>master</GitHubRepositoryBranch>
     <GitHubRepositoryName>ManagedFusion</GitHubRepositoryName>
     <GitHubBaseRepositoryUrl>https://github.com/$(GitHubOrganization)/$(GitHubRepositoryName)</GitHubBaseRepositoryUrl>
-    <GitHubRepositoryUrl>$(GitHubBaseRepositoryUrl).git</GitHubRepositoryUrl>
+    <GitHubRepositoryUrl>$(GitHubBaseRepositoryUrl)</GitHubRepositoryUrl>
     <GitHubPackageProjectUrl>$(GitHubBaseRepositoryUrl)/tree/$(GitHubRepositoryBranch)</GitHubPackageProjectUrl>
   </PropertyGroup>
 
   <Import Project="Sdk.props" Sdk="Microsoft.DotNet.Arcade.Sdk" />
   
   <PropertyGroup>
-    <IsShipping>false</IsShipping>
+    <IsShipping>true</IsShipping>
 
     <Authors>Brad Marshall</Authors> 
     <Owners>$(Authors)</Owners>
